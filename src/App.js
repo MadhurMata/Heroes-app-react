@@ -1,9 +1,16 @@
+import { BrowserRouter as Router } from 'react-router-dom';
+import { ErrorBoundary } from 'react-error-boundary';
+
+import AppRoutes from 'routes/AppRoutes';
+import NotFound from 'pages/notFound/NotFound';
 
 function App() {
   return (
-    <div>
-      <h1>Clean react app</h1>
-    </div>
+    <ErrorBoundary FallbackComponent={NotFound}>
+      <Router>
+        <AppRoutes />
+      </Router>
+    </ErrorBoundary>
   );
 }
 
