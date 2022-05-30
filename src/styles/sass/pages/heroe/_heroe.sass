@@ -1,4 +1,4 @@
-.heroe-detail-top-section
+.heroe-detail-top
   margin: 32px 0
   display: flex
 
@@ -29,3 +29,11 @@
     &__info-container, &__img-container
       width: auto
       padding: 0
+
+.truncate
+  @include truncateText(298px)
+
+.truncate-multipleLine
+  display: -webkit-box
+  -webkit-line-clamp: 3
+  -webkit-box-orient: vertical

@@ -32,20 +32,20 @@ function Heroe() {
       ) : (
         heroe && (
           <>
-            <section className="heroe-detail-top-section">
-              <div className="heroe-detail-top-section__img-container">
+            <section className="heroe-detail-top">
+              <div className="heroe-detail-top__img-container">
                 <img
                   src={`${heroe.thumbnail.path}.${heroe.thumbnail.extension}`}
                   alt={heroe.name}
                 />
               </div>
-              <div className="heroe-detail-top-section__info-container">
+              <div className="heroe-detail-top__info-container">
                 <h3>{heroe.name}</h3>
                 <h5>{heroe.modified}</h5>
                 <p>{heroe.description}</p>
               </div>
             </section>
-            <section className="heroe-detail-bottom-section">
+            <section className="heroe-detail-bottom">
               {heroe.events.available > 0 ? (
                 <>
                   <h5>Events</h5>
