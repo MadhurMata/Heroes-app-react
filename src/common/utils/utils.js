@@ -16,6 +16,22 @@ export const mapHeroesData = (heroesList) => {
 };
 
 /**
+ * Maps API response returning only needed data:
+ * @param {object} heroe Heroe data.
+ */
+export const mapHeroeData = (heroe) => {
+  const { name, description, thumbnail, events, modified } = heroe;
+
+  return {
+    name,
+    description,
+    thumbnail,
+    events,
+    modified: dateFormater(modified)
+  };
+};
+
+/**
  * Formats date retriving the year:
  * @param {string} date Modified date.
  */
