@@ -8,6 +8,8 @@ function HeroCard({ hero }) {
   const { thumbnail, name, description, id } = hero;
   let navigate = useNavigate();
 
+  console.log('i am rendering', hero.name);
+
   return (
     <div className="card">
       <ImageContainer

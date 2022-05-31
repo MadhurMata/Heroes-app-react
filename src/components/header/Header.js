@@ -4,7 +4,6 @@ import { useNavigate, useLocation } from 'react-router-dom';
 function Header() {
   const navigate = useNavigate();
   const location = useLocation();
-  console.log('params', location);
 
   return (
     <header className="header">
@@ -16,7 +15,7 @@ function Header() {
           role="button"
           tabIndex={0}
           onKeyDown={() => navigate(-1)}>
-          <h5>Home</h5>
+          <h5>Back</h5>
         </div>
       )}
     </header>

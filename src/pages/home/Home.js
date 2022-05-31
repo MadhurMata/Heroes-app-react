@@ -1,10 +1,10 @@
-import React, { useEffect, useState, createContext } from 'react';
+import React, { useEffect, useState, createContext, useCallback } from 'react';
 
 import { useFetch } from 'hooks/useFetch';
 import { mapHeroesData } from 'common/utils/utils';
 
 import Layout from 'components/layout/Layout';
-import { RegularList } from 'components/regularList/RegularList';
+import RegularList from 'components/regularList/RegularList';
 import HeroCard from 'components/heroCard/HeroCard';
 import Filters from 'components/filters/Filters';
 
@@ -21,6 +21,13 @@ function Home() {
       setItemsTemp(mapHeroesData(data.data.results));
     }
   }, [data]);
+
+  const onItemClick = useCallback(
+    (event) => {
+      console.log('You clicked ', event.currentTarget);
+    },
+    [items]
+  );
 
   return (
     <Layout>

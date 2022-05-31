@@ -1,4 +1,6 @@
-export const RegularList = ({
+import React from 'react';
+
+const RegularList = ({
   items,
   emptyItemsMessage,
   resourceName,
@@ -19,3 +21,5 @@ export const RegularList = ({
     </div>
   );
 };
+
+export default RegularList;

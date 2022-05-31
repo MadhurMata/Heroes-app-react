@@ -5,7 +5,7 @@ import { useFetch } from 'hooks/useFetch';
 import { mapHeroData } from 'common/utils/utils';
 
 import Layout from 'components/layout/Layout';
-import { RegularList } from 'components/regularList/RegularList';
+import RegularList from 'components/regularList/RegularList';
 import EventCard from 'components/eventCard/EventCard';
 import ImageContainer from 'components/imageContainer/ImageContainer';
 
