@@ -1,4 +1,4 @@
-import React, { useEffect, useState, createContext, useCallback } from 'react';
+import React, { useEffect, useState, createContext } from 'react';
 
 import { useFetch } from 'hooks/useFetch';
 import { mapHeroesData } from 'common/utils/utils';
@@ -21,13 +21,6 @@ function Home() {
       setItemsTemp(mapHeroesData(data.data.results));
     }
   }, [data]);
-
-  const onItemClick = useCallback(
-    (event) => {
-      console.log('You clicked ', event.currentTarget);
-    },
-    [items]
-  );
 
   return (
     <Layout>
