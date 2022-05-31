@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import Button from 'components/button/Button';
+import ImageContainer from 'components/imageContainer/ImageContainer';
 
 function HeroeCard({ heroe }) {
   const { thumbnail, name, description, id } = heroe;
@@ -9,9 +10,11 @@ function HeroeCard({ heroe }) {
 
   return (
     <div className="card">
-      <div className="card-img-container">
-        <img src={`${thumbnail.path}.${thumbnail.extension}`} className="App-logo" alt={name} />
-      </div>
+      <ImageContainer
+        url={`${thumbnail.path}.${thumbnail.extension}`}
+        altSource={name}
+        stylesProp="card-img-container"
+      />
       <div className="card-text-container">
         <div className="info-container">
           <h5 className="truncate">{name}</h5>

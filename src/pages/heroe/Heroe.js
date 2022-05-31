@@ -7,6 +7,7 @@ import { mapHeroeData } from 'common/utils/utils';
 import Layout from 'components/layout/Layout';
 import { RegularList } from 'components/regularList/RegularList';
 import EventCard from 'components/eventCard/EventCard';
+import ImageContainer from 'components/imageContainer/ImageContainer';
 
 function Heroe() {
   const params = useParams();
@@ -33,12 +34,17 @@ function Heroe() {
         heroe && (
           <>
             <section className="heroe-detail-top">
-              <div className="heroe-detail-top__img-container">
+              <ImageContainer
+                url={`${heroe.thumbnail.path}.${heroe.thumbnail.extension}`}
+                altSource={heroe.name}
+                stylesProp="heroe-detail-top__img-container"
+              />
+              {/* <div className="heroe-detail-top__img-container">
                 <img
                   src={`${heroe.thumbnail.path}.${heroe.thumbnail.extension}`}
                   alt={heroe.name}
                 />
-              </div>
+              </div> */}
               <div className="heroe-detail-top__info-container">
                 <h3>{heroe.name}</h3>
                 <h5>{heroe.modified}</h5>
