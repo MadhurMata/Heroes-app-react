@@ -1,5 +1,7 @@
 import React from 'react';
 
+import searchImg from 'assets/images/search.svg';
+
 export default function Searchbar({ handleChange, searchValue }) {
   return (
     <div>
@@ -12,7 +14,7 @@ export default function Searchbar({ handleChange, searchValue }) {
           value={searchValue}
         />
         <div className="search-button">
-          <img src="/images/search.svg" alt="Search" />
+          <img src={searchImg} alt="Search" />
         </div>
       </form>
     </div>

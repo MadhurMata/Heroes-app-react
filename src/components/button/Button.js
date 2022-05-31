@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Button({ action, imageUrl, textContent }) {
+function Button({ action, styles, textContent }) {
   return (
     <div
       className="button"
@@ -9,7 +9,7 @@ function Button({ action, imageUrl, textContent }) {
       onClick={() => action()}
       onKeyDown={() => action()}>
       <p>{textContent}</p>
-      <span className={'icon ' + imageUrl}></span>
+      <span className={'icon ' + styles}></span>
     </div>
   );
 }

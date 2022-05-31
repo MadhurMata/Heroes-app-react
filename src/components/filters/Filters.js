@@ -50,7 +50,7 @@ function Filters() {
     <div className="filter">
       <div className="filter_shown">
         <Searchbar handleChange={updateSearchValue} searchValue={searchValue} />
-        <Button action={toggleFilter} textContent="Filter" imageUrl="icon-filter" />
+        <Button action={toggleFilter} textContent="Filter" styles="icon-filter" />
       </div>
       {showFilter ? (
         <div className="filter_hidden">

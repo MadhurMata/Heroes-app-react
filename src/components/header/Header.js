@@ -15,7 +15,7 @@ function Header() {
           role="button"
           tabIndex={0}
           onKeyDown={() => navigate(-1)}>
-          <h5>Back</h5>
+          <h5>Go back</h5>
         </div>
       )}
     </header>
