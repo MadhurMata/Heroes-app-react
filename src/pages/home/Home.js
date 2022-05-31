@@ -5,7 +5,7 @@ import { mapHeroesData } from 'common/utils/utils';
 
 import Layout from 'components/layout/Layout';
 import { RegularList } from 'components/regularList/RegularList';
-import HeroeCard from 'components/heroeCard/HeroeCard';
+import HeroCard from 'components/heroCard/HeroCard';
 import Filters from 'components/filters/Filters';
 
 export const TreesContext = createContext();
@@ -38,10 +38,10 @@ function Home() {
           items && (
             <RegularList
               items={items}
-              resourceName="heroe"
-              emptyItemsMessage={`Sorry we couldn't find any heroe`}
+              resourceName="hero"
+              emptyItemsMessage={`Sorry we couldn't find any hero`}
               styles="list-grid"
-              itemComponent={HeroeCard}
+              itemComponent={HeroCard}
             />
           )
         )}

@@ -2,21 +2,21 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { useFetch } from 'hooks/useFetch';
-import { mapHeroeData } from 'common/utils/utils';
+import { mapHeroData } from 'common/utils/utils';
 
 import Layout from 'components/layout/Layout';
 import { RegularList } from 'components/regularList/RegularList';
 import EventCard from 'components/eventCard/EventCard';
 import ImageContainer from 'components/imageContainer/ImageContainer';
 
-function Heroe() {
+function Hero() {
   const params = useParams();
-  const { loading, data, error } = useFetch(`/characters/${params.heroeId}`);
-  const [heroe, setHeroe] = useState();
+  const { loading, data, error } = useFetch(`/characters/${params.heroId}`);
+  const [hero, setHero] = useState();
 
   useEffect(() => {
     if (data) {
-      setHeroe(mapHeroeData(data.data.results[0]));
+      setHero(mapHeroData(data.data.results[0]));
     }
   }, [data]);
 
@@ -31,32 +31,26 @@ function Heroe() {
           <h5>Error loading data!...</h5>
         </div>
       ) : (
-        heroe && (
+        hero && (
           <>
-            <section className="heroe-detail-top">
+            <section className="hero-detail-top">
               <ImageContainer
-                url={`${heroe.thumbnail.path}.${heroe.thumbnail.extension}`}
-                altSource={heroe.name}
-                stylesProp="heroe-detail-top__img-container"
+                url={`${hero.thumbnail.path}.${hero.thumbnail.extension}`}
+                altSource={hero.name}
+                stylesProp="hero-detail-top__img-container"
               />
-              {/* <div className="heroe-detail-top__img-container">
-                <img
-                  src={`${heroe.thumbnail.path}.${heroe.thumbnail.extension}`}
-                  alt={heroe.name}
-                />
-              </div> */}
-              <div className="heroe-detail-top__info-container">
-                <h3>{heroe.name}</h3>
-                <h5>{heroe.modified}</h5>
-                <p>{heroe.description}</p>
+              <div className="hero-detail-top__info-container">
+                <h3>{hero.name}</h3>
+                <h5>{hero.modified}</h5>
+                <p>{hero.description}</p>
               </div>
             </section>
-            <section className="heroe-detail-bottom">
-              {heroe.events.available > 0 ? (
+            <section className="hero-detail-bottom">
+              {hero.events.available > 0 ? (
                 <>
                   <h5>Events</h5>
                   <RegularList
-                    items={heroe.events.items}
+                    items={hero.events.items}
                     resourceName="event"
                     styles="regular-list"
                     itemComponent={EventCard}
@@ -71,4 +65,4 @@ function Heroe() {
   );
 }
 
-export default Heroe;
+export default Hero;

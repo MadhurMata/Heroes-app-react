@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import Button from 'components/button/Button';
 import ImageContainer from 'components/imageContainer/ImageContainer';
 
-function HeroeCard({ heroe }) {
-  const { thumbnail, name, description, id } = heroe;
+function HeroCard({ hero }) {
+  const { thumbnail, name, description, id } = hero;
   let navigate = useNavigate();
 
   return (
@@ -34,4 +34,4 @@ function HeroeCard({ heroe }) {
   );
 }
 
-export default HeroeCard;
+export default HeroCard;

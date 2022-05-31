@@ -3,8 +3,8 @@
  * @param {array} heroesList List of heroes.
  */
 export const mapHeroesData = (heroesList) => {
-  return heroesList.map((heroe) => {
-    const { name, id, description, thumbnail, modified } = heroe;
+  return heroesList.map((hero) => {
+    const { name, id, description, thumbnail, modified } = hero;
     return {
       id,
       name,
@@ -17,10 +17,10 @@ export const mapHeroesData = (heroesList) => {
 
 /**
  * Maps API response returning only needed data:
- * @param {object} heroe Heroe data.
+ * @param {object} hero Hero data.
  */
-export const mapHeroeData = (heroe) => {
-  const { name, description, thumbnail, events, modified } = heroe;
+export const mapHeroData = (hero) => {
+  const { name, description, thumbnail, events, modified } = hero;
 
   return {
     name,
