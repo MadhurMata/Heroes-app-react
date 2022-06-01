@@ -59,7 +59,11 @@ function Filters() {
             checkbox={checkbox}
             label="Heroes with description only"
           />
-          <Select updateSelect={updateSelect} selectOptions={selectOptions} />
+          <Select
+            updateSelect={updateSelect}
+            selectOptions={selectOptions}
+            selectValue={selectValue}
+          />
         </div>
       ) : null}
     </div>

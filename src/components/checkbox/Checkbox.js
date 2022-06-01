@@ -6,12 +6,13 @@ function Checkbox({ checkbox = false, toggleCheckboxState, label }) {
     <div className="form-checkbox">
       <input
         type="checkbox"
-        id="checkbox2"
+        id="checkbox"
         value={checkbox}
+        checked={checkbox}
         onChange={() => toggleCheckboxState()}
         onKeyDown={() => toggleCheckboxState()}
       />
-      <label htmlFor="checkbox2">
+      <label htmlFor="checkbox">
         <p>{label}</p>
       </label>
     </div>

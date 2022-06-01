@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Select({ updateSelect, selectOptions }) {
+function Select({ updateSelect, selectOptions, selectValue }) {
   return (
     <label className="select-custom">
       <select
         name="select"
         className="select-custom__select"
+        value={selectValue}
         onChange={(e) => updateSelect(e.target.value)}>
         {selectOptions &&
           selectOptions.map((option, i) => (
@@ -22,7 +23,8 @@ function Select({ updateSelect, selectOptions }) {
 
 Select.propTypes = {
   updateSelect: PropTypes.func,
-  selectOptions: PropTypes.arrayOf(PropTypes.string)
+  selectOptions: PropTypes.arrayOf(PropTypes.string),
+  selectValue: PropTypes.string
 };
 
 export default Select;
