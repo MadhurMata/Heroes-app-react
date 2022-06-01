@@ -16,11 +16,11 @@
     line-height: 24px
     padding-left: 10px
     cursor: pointer
-    -webkit-appearance: none
+    appearance: none
     -moz-appearance: none
     -ms-appearance: none
     -o-appearance: none
-    appearance: none
+    -webkit-appearance: none
 
     &::-ms-expand
       display: none
@@ -42,6 +42,7 @@
     margin-top: -8px
     background-image: url(/assets/images/downward-arrow.svg)
     cursor: pointer
+    pointer-events: none
 
   @media screen and (max-width: 730px)
     width: 100%

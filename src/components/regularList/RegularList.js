@@ -9,9 +9,9 @@ const RegularList = ({
 }) => {
   if (items.length === 0)
     return (
-      <div>
+      <>
         <h5>{emptyItemsMessage}</h5>
-      </div>
+      </>
     );
   return (
     <div className={styles}>

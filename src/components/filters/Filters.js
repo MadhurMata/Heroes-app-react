@@ -48,12 +48,12 @@ function Filters() {
 
   return (
     <div className="filter">
-      <div className="filter_shown">
+      <div className="filter__shown">
         <Searchbar handleChange={updateSearchValue} searchValue={searchValue} />
         <Button action={toggleFilter} textContent="Filter" styles="icon-filter" />
       </div>
       {showFilter ? (
-        <div className="filter_hidden">
+        <div className="filter__hidden">
           <Checkbox
             toggleCheckboxState={toggleCheckboxState}
             checkbox={checkbox}

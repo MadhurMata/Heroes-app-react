@@ -27,9 +27,9 @@ function Hero() {
           <div className="spinner"></div>
         </div>
       ) : error ? (
-        <div>
+        <>
           <h5>Error loading data!...</h5>
-        </div>
+        </>
       ) : (
         hero && (
           <>

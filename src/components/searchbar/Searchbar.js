@@ -2,9 +2,9 @@ import React from 'react';
 
 import searchImg from 'assets/images/search.svg';
 
-export default function Searchbar({ handleChange, searchValue }) {
+function Searchbar({ handleChange, searchValue }) {
   return (
-    <div>
+    <>
       <form className="searchbar-container" action="/" method="get">
         <input
           className="searchbar"
@@ -13,10 +13,12 @@ export default function Searchbar({ handleChange, searchValue }) {
           placeholder="Name of character"
           value={searchValue}
         />
-        <div className="search-button">
+        <div className="search-icon">
           <img src={searchImg} alt="Search" />
         </div>
       </form>
-    </div>
+    </>
   );
 }
+
+export default Searchbar;

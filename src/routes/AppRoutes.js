@@ -5,7 +5,7 @@ import Home from 'pages/home/Home';
 import Hero from 'pages/hero/Hero';
 import NotFound from 'pages/notFound/NotFound';
 
-export default function AppRoutes() {
+function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
@@ -14,3 +14,5 @@ export default function AppRoutes() {
     </Routes>
   );
 }
+
+export default AppRoutes;
