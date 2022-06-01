@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Button({ action, styles, textContent }) {
   return (
@@ -13,5 +14,11 @@ function Button({ action, styles, textContent }) {
     </div>
   );
 }
+
+Button.propTypes = {
+  action: PropTypes.func,
+  styles: PropTypes.string,
+  textContent: PropTypes.string
+};
 
 export default Button;

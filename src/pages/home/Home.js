@@ -7,6 +7,7 @@ import Layout from 'components/layout/Layout';
 import RegularList from 'components/regularList/RegularList';
 import HeroCard from 'components/heroCard/HeroCard';
 import Filters from 'components/filters/Filters';
+import Loader from 'components/loader/Loader';
 
 export const TreesContext = createContext();
 
@@ -27,9 +28,7 @@ function Home() {
       <TreesContext.Provider value={[items, itemsTemp, setItems]}>
         <Filters />
         {loading ? (
-          <div className="spinner-container">
-            <div className="spinner"></div>
-          </div>
+          <Loader></Loader>
         ) : error ? (
           <>
             <h5>Error loading data!...</h5>

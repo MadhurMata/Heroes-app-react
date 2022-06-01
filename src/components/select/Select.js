@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Select({ updateSelect, selectOptions }) {
   return (
@@ -18,5 +19,10 @@ function Select({ updateSelect, selectOptions }) {
     </label>
   );
 }
+
+Select.propTypes = {
+  updateSelect: PropTypes.func,
+  selectOptions: PropTypes.arrayOf(PropTypes.string)
+};
 
 export default Select;

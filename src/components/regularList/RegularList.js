@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const RegularList = ({
   items,
@@ -20,6 +21,13 @@ const RegularList = ({
       ))}
     </div>
   );
+};
+
+RegularList.propTypes = {
+  emptyItemsMessage: PropTypes.string,
+  resourceName: PropTypes.string,
+  itemComponent: PropTypes.func,
+  styles: PropTypes.string
 };
 
 export default RegularList;

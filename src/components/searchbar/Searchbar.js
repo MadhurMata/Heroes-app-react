@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import searchImg from 'assets/images/search.svg';
 
@@ -20,5 +21,10 @@ function Searchbar({ handleChange, searchValue }) {
     </>
   );
 }
+
+Searchbar.propTypes = {
+  handleChange: PropTypes.func,
+  searchValue: PropTypes.string
+};
 
 export default Searchbar;

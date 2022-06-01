@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import Button from 'components/button/Button';
 import ImageContainer from 'components/imageContainer/ImageContainer';
@@ -33,5 +34,17 @@ function HeroCard({ hero }) {
     </div>
   );
 }
+
+HeroCard.propTypes = {
+  hero: PropTypes.shape({
+    thumbnail: PropTypes.PropTypes.exact({
+      extension: PropTypes.string,
+      path: PropTypes.string
+    }),
+    name: PropTypes.string,
+    description: PropTypes.string,
+    id: PropTypes.number
+  })
+};
 
 export default HeroCard;

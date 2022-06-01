@@ -8,6 +8,7 @@ import Layout from 'components/layout/Layout';
 import RegularList from 'components/regularList/RegularList';
 import EventCard from 'components/eventCard/EventCard';
 import ImageContainer from 'components/imageContainer/ImageContainer';
+import Loader from 'components/loader/Loader';
 
 function Hero() {
   const params = useParams();
@@ -23,9 +24,7 @@ function Hero() {
   return (
     <Layout>
       {loading ? (
-        <div className="spinner-container">
-          <div className="spinner"></div>
-        </div>
+        <Loader></Loader>
       ) : error ? (
         <>
           <h5>Error loading data!...</h5>

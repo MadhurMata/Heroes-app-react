@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Checkbox({ checkbox = false, toggleCheckboxState, label }) {
   return (
@@ -16,5 +17,11 @@ function Checkbox({ checkbox = false, toggleCheckboxState, label }) {
     </div>
   );
 }
+
+Checkbox.propTypes = {
+  checkbox: PropTypes.bool,
+  toggleCheckboxState: PropTypes.func,
+  label: PropTypes.string
+};
 
 export default Checkbox;
