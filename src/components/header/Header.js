@@ -11,11 +11,11 @@ function Header() {
       {location.pathname === '/' ? null : (
         <div
           className="back-button"
-          onClick={() => navigate(-1)}
+          onClick={() => navigate('/')}
           role="button"
           tabIndex={0}
-          onKeyDown={() => navigate(-1)}>
-          <h5>Go back</h5>
+          onKeyDown={() => navigate('/')}>
+          <p>Home</p>
         </div>
       )}
     </header>

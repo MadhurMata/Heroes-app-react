@@ -7,8 +7,9 @@
     width: 50%
 
     img
-      width: inherit
       width: 100%
+      height: auto
+      aspect-ratio: attr(width) / attr(height)
 
   &__info-container
     display: flex
@@ -32,7 +33,9 @@
 
 .hero-detail-bottom
   width: 100%
-  padding-left: 32px
+
+  @media screen and (max-width: 850px)
+    padding-left: 32px
 
 .truncate
   @include truncateText(298px)

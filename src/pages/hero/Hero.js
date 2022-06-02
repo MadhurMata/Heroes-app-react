@@ -39,15 +39,15 @@ function Hero() {
                 stylesProp="hero-detail-top__img-container"
               />
               <div className="hero-detail-top__info-container">
-                <h3>{hero.name}</h3>
-                <h5>{hero.modified}</h5>
+                <h2>{hero.name}</h2>
+                <h3>{hero.modified}</h3>
                 <p>{hero.description}</p>
               </div>
             </section>
             <section className="hero-detail-bottom">
               {hero.events.available > 0 ? (
                 <>
-                  <h5>Events</h5>
+                  <h4>Events</h4>
                   <RegularList
                     items={hero.events.items}
                     resourceName="event"

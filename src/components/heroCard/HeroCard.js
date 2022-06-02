@@ -18,7 +18,7 @@ function HeroCard({ hero }) {
       />
       <div className="card-text-container">
         <div className="info-container">
-          <h5 className="truncate">{name}</h5>
+          <h2 className="truncate">{name}</h2>
           <p className="truncate-multipleLine">
             {description !== '' ? description : '(No description available)'}
           </p>
@@ -29,6 +29,7 @@ function HeroCard({ hero }) {
           }}
           textContent="Read more"
           styles="icon-arrow"
+          label="Read more"
         />
       </div>
     </div>
