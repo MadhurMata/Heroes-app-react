@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ErrorMessage from 'components/errorMessage/ErrorMessage';
 
 const RegularList = ({
   items,
@@ -8,12 +9,7 @@ const RegularList = ({
   itemComponent: ItemComponent,
   styles
 }) => {
-  if (items.length === 0)
-    return (
-      <>
-        <h5>{emptyItemsMessage}</h5>
-      </>
-    );
+  if (items.length === 0) return <ErrorMessage message={emptyItemsMessage} />;
   return (
     <div className={styles}>
       {items.map((item, i) => (

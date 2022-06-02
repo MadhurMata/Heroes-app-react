@@ -9,6 +9,7 @@ import RegularList from 'components/regularList/RegularList';
 import EventCard from 'components/eventCard/EventCard';
 import ImageContainer from 'components/imageContainer/ImageContainer';
 import Loader from 'components/loader/Loader';
+import ErrorMessage from 'components/errorMessage/ErrorMessage';
 
 function Hero() {
   const params = useParams();
@@ -26,9 +27,7 @@ function Hero() {
       {loading ? (
         <Loader></Loader>
       ) : error ? (
-        <>
-          <h5>Error loading data!...</h5>
-        </>
+        <ErrorMessage message="Error loading data!..." />
       ) : (
         hero && (
           <>

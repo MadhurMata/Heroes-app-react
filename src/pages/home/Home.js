@@ -8,6 +8,7 @@ import RegularList from 'components/regularList/RegularList';
 import HeroCard from 'components/heroCard/HeroCard';
 import Filters from 'components/filters/Filters';
 import Loader from 'components/loader/Loader';
+import ErrorMessage from 'components/errorMessage/ErrorMessage';
 
 export const TreesContext = createContext();
 
@@ -30,15 +31,13 @@ function Home() {
         {loading ? (
           <Loader></Loader>
         ) : error ? (
-          <>
-            <h5>Error loading data!...</h5>
-          </>
+          <ErrorMessage message="Error loading data!..." />
         ) : (
           items && (
             <RegularList
               items={items}
               resourceName="hero"
-              emptyItemsMessage={`Sorry we couldn't find any hero`}
+              emptyItemsMessage="Sorry we couldn't find any hero with the filters selected"
               styles="list-grid"
               itemComponent={HeroCard}
             />
