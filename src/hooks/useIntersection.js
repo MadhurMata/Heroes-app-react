@@ -1,4 +1,4 @@
-import { useState, useEffect, useLayoutEffect } from 'react';
+import { useState, useLayoutEffect } from 'react';
 
 export const useIntersection = (element, rootMargin = '0px') => {
   const [isIntersecting, setIntersecting] = useState(false);
