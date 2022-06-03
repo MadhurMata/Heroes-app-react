@@ -24,8 +24,6 @@ function Home() {
     }
   }, [data]);
 
-  console.log('error', error);
-
   return (
     <Layout>
       <TreesContext.Provider value={[items, itemsTemp, setItems]}>
