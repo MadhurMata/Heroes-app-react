@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 
-import { dateFilter, descriptionFilter, searchFilter } from 'components/filters/utils.test';
+import { dateFilter, descriptionFilter, searchFilter } from 'components/filters/utils';
 
 import Searchbar from 'components/searchbar/Searchbar';
 import Button from 'components/button/Button';
