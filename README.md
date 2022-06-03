@@ -7,6 +7,7 @@ The project shows a list of 20 Heroes with basic information about them. Include
 ### `Install the project`
 
 Clone, add an environment file (.env) in the root folder (inside the .env add the environment variable + token). Go to root folder and run `npm install`.
+Environment variables names: REACT_APP_HEROES_BASE_URL, REACT_APP_APIKEY, REACT_APP_HASH
 
 ### `Run the project`
 
@@ -28,3 +29,7 @@ Run `npm test`
 ## Production site link
 
 https://zippy-chebakia-f13639.netlify.app/
+
+## Notes
+
+I have tried to use polyfills, different packages, and react versions, among other approaches, to make the app work for IE11, but I wasn't successful. I would be happy if you could give me some suggestions on how to archive it.
