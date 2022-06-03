@@ -6,7 +6,7 @@ The project shows a list of 20 Heroes with basic information about them. Include
 
 ### `Install the project`
 
-Clone, add an environment file in the root folder (inside add the environment variable + token). Go to root folder and run `npm install`.
+Clone, add an environment file (.env) in the root folder (inside the .env add the environment variable + token). Go to root folder and run `npm install`.
 
 ### `Run the project`
 
@@ -19,9 +19,12 @@ Run `npm test`
 ## Future Improvements
 
 - Filter heroes in the backend or API if allowed in order to bring the real amount of heroes from the server.
-- use graphQL when allowed.
+- Use typeScript
+- Use graphQL when allowed.
 - Better UX/UI.
 - Infinite scrolling/pagination (Lazy loading).
 - Use styled components.
 
 ## Production site link
+
+https://zippy-chebakia-f13639.netlify.app/
