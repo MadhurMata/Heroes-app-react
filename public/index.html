@@ -4,25 +4,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="X-UA-Compatible" content="IE=11" />
 
   <meta name="description" content="Heroes website" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:500,700, 900&display=swap" />
 
   <title>Heroes App</title>
-  <script>
-    if (!String.prototype.endsWith) {
-      String.prototype.endsWith = function (searchString, position) {
-        var subjectString = this.toString();
-        if (typeof position !== 'number' || !isFinite(position) || Math.floor(position) !== position || position > subjectString.length) {
-          position = subjectString.length;
-        }
-        position -= searchString.length;
-        var lastIndex = subjectString.indexOf(searchString, position);
-        return lastIndex !== -1 && lastIndex === position;
-      };
-    }
-  </script>
+
 </head>
 
 <body>
