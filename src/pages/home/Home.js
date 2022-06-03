@@ -1,7 +1,7 @@
 import React, { useEffect, useState, createContext } from 'react';
 
 import { useFetch } from 'hooks/useFetch';
-import { mapHeroesData } from 'common/utils/utils';
+import { mapHeroesData } from 'pages/home/utils';
 
 import Layout from 'components/layout/Layout';
 import RegularList from 'components/regularList/RegularList';

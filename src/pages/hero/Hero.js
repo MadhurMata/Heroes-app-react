@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { useFetch } from 'hooks/useFetch';
-import { mapHeroData } from 'common/utils/utils';
+import { mapHeroData } from 'pages/hero/utils';
 
 import Layout from 'components/layout/Layout';
 import RegularList from 'components/regularList/RegularList';

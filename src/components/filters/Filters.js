@@ -1,12 +1,13 @@
 import React, { useState, useEffect, useContext } from 'react';
 
+import { dateFilter, descriptionFilter, searchFilter } from 'components/filters/utils.test';
+
 import Searchbar from 'components/searchbar/Searchbar';
 import Button from 'components/button/Button';
 import Checkbox from 'components/checkbox/Checkbox';
 import Select from 'components/select/Select';
 
 import { TreesContext } from 'pages/home/Home';
-import { dateFilter, descriptionFilter, searchFilter } from 'common/utils/utils';
 
 const selectOptions = ['Filter by date (Not filtered)', '20 century', '21 century'];
 
