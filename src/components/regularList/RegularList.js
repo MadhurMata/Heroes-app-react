@@ -12,8 +12,8 @@ const RegularList = ({
   if (items.length === 0) return <ErrorMessage message={emptyItemsMessage} />;
   return (
     <div className={styles}>
-      {items.map((item, i) => (
-        <ItemComponent key={i} {...{ [resourceName]: item }} />
+      {items.map((item) => (
+        <ItemComponent key={'item-' + item.name} {...{ [resourceName]: item }} />
       ))}
     </div>
   );

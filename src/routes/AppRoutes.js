@@ -1,17 +1,21 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-import Home from 'pages/home/Home';
-import Hero from 'pages/hero/Hero';
-import NotFound from 'pages/notFound/NotFound';
+import Loader from 'components/loader/Loader';
+
+const Home = React.lazy(() => import('../pages/home/Home'));
+const Hero = React.lazy(() => import('../pages/hero/Hero'));
+const NotFound = React.lazy(() => import('../pages/notFound/NotFound'));
 
 function AppRoutes() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/:heroName/:heroId" element={<Hero />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+    <Suspense fallback={<Loader></Loader>}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/:heroName/:heroId" element={<Hero />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Suspense>
   );
 }
 

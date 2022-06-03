@@ -1,21 +1,16 @@
-import { useState, useEffect } from 'react';
+import useSWR from 'swr';
+
+const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 export function useFetch(uri) {
-  const [data, setData] = useState();
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState();
+  const { data, error } = useSWR(
+    `${process.env.REACT_APP_HEROES_BASE_URL}${uri}?ts=10&apikey=${process.env.REACT_APP_APIKEY}&hash=${process.env.REACT_APP_HASH}`,
+    fetcher
+  );
 
-  useEffect(() => {
-    if (!uri) return;
-
-    fetch(
-      `${process.env.REACT_APP_HEROES_BASE_URL}${uri}?ts=10&apikey=${process.env.REACT_APP_APIKEY}&hash=${process.env.REACT_APP_HASH}`
-    )
-      .then((data) => data.json())
-      .then(setData)
-      .then(() => setLoading(false))
-      .catch(setError);
-  }, [uri]);
-
-  return { loading, data, error };
+  return {
+    data,
+    loading: !error && !data,
+    error
+  };
 }
