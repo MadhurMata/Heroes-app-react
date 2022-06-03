@@ -9,6 +9,16 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:500,700, 900&display=swap" />
 
   <title>Heroes App</title>
+  <script>
+    if (!String.prototype.endsWith) {
+      String.prototype.endsWith = function (search, this_len) {
+        if (this_len === undefined || this_len > this.length) {
+          this_len = this.length;
+        }
+        return this.substring(this_len - search.length, this_len) === search
+      }
+    }
+  </script>
 </head>
 
 <body>
